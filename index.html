@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/font-awesome-4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/interface.css">
+        <script src="js/compiler/traceur.js"></script>
+        <script src="js/compiler/BrowserSystem.js"></script>
+        <script src="js/compiler/bootstrap.js"></script>
+
+
+        <style type="text/css">
+            form {
+                width: 50%;
+                border-radius: 4px;
+                box-shadow: 4px 4px 16px rgba(0,0,0,.5);
+                color: white;
+                border: 1px solid rgba(0,0,0,.85);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                padding: 1.5em;
+                z-index: 99;
+                background: #282c34;
+                max-width: 392px;
+            }
+
+            label {
+                display: block;
+            }
+
+            input {
+                width: calc(100% - .5em);
+            }
+
+            label:nth-of-type(2) {
+                margin-top: 1em;
+            }
+
+            button {
+                width: auto;
+                display: block;
+                float: right;
+                margin-top: 1em;
+            }
+
+            #messages {
+                float: left;
+                color: red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="loginForm">
+            <label>Email</label>
+            <input id="email" type="email">
+
+            <label>Password</label>
+            <input id="password" type="password">
+
+            <p id="messages"></p>
+            <button id='submit' type="button" class="primary right">Login</button>
+        </form>
+
+        <div id="mdlOverlay" class='active'></div>
+
+        <script src="js/login.compiled.js"></script>
+    </body>
+</html>

@@ -1,0 +1,766 @@
+.bg-grey              { background: #282c34; } /* Body */
+.bg-dark-grey         { background: #21252b; } /* Menu bar */
+.bg-darker-grey       { background: #282c34; } /* Grid */
+.bg-darkest-grey      { background: #121317; } /* Modal headers */
+.bg-light-grey        { background: #373b47; } /* Accordion headers */
+.bg-grey-accent-1     { background: #20272f; } /* Accordion bodies */
+.bg-grey-accent-2     { background: #1a2026; } /* Checkboxes */
+.bg-grey-accent-3     { background: #1e2127; }
+.bg-blue, .bg-primary { background: #088cff; }
+
+.grey           { color: #282c34; }
+.dark-grey      { color: #21252b; }
+.darker-grey    { color: #282c34; }
+.darkest-grey   { color: #121317; }
+.light-grey     { color: #373b47; }
+.grey-accent-1  { color: #20272f; }
+.grey-accent-2  { color: #1a2026; }
+.blue, .primary { color: #088cff; }
+.red            { color: red; }
+.green          { color: green; }
+.yellow         { color: yellow; }
+.orange         { color: orange; }
+.purple         { color: purple; }
+
+.gradient-primary, .gradient-blue {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#088cff+0,0669bf+100 */
+    background: #088cff; /* Old browsers */
+    background: -moz-linear-gradient(top, #088cff 0%, #0669bf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #088cff 0%,#0669bf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #088cff 0%,#0669bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#088cff', endColorstr='#0669bf',GradientType=0 ); /* IE6-9 */
+}
+.gradient-darkest-grey {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#121317+0,0e0f12+100 */
+    background: #121317; /* Old browsers */
+    background: -moz-linear-gradient(top, #121317 0%, #0e0f12 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #121317 0%,#0e0f12 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #121317 0%,#0e0f12 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121317', endColorstr='#0e0f12',GradientType=0 ); /* IE6-9 */
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.15);
+    border-bottom: 1px solid rgba(255,255,255,.085);
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url("../fonts/HelveticaNeueLTStd-Th.otf") format("opentype");
+}
+
+* {
+    font-family: HelveticaNeue;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #282c34;
+}
+
+body {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden { display: none; }
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.col {
+    width: 33%;
+    height: 100%;
+    float: left;
+}
+
+.control > label {
+    display: block;
+}
+
+.accordion-content > .control {
+    margin-top: 1em;
+}
+
+.accordion-content > .control:first-of-type {
+    margin-top: 0;
+}
+
+#qw-topWall {
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+#qw-topWall:hover {
+    border-bottom: 1px solid rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+#qw-rightWall {
+    border-left: 1px solid rgba(255,255,255,.15);
+}
+#qw-rightWall:hover {
+    border-left: 1px solid rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+#qw-bottomWall {
+    border-top: 1px solid rgba(255,255,255,.15);
+}
+#qw-bottomWall:hover {
+    border-top: 1px solid rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+#qw-leftWall {
+    border-right: 1px solid rgba(255,255,255,.15);
+}
+#qw-leftWall:hover {
+    border-right: 1px solid rgba(255,255,255,.3);
+    cursor: pointer;
+}
+
+#menuBar {
+    flex: 4 1 100%;
+    height: 24px;
+    background: #21252b;
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+}
+
+#menuBar li {
+    cursor: pointer;
+}
+
+#menuBar > ul {
+    margin: 6px 0 0 8px;
+    color: rgba(255, 255, 255, .75);
+}
+
+#menuBar > ul > li {
+    float: left;
+    margin-right: 1em;
+    position: relative;
+}
+
+#menuBar > ul > li > ul {
+    display: none;
+    min-width: 150px;
+    background: #21252b;
+    padding: 16px 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top: 0;
+    box-shadow: 1px 1px 1px rgba(255,255,255,.05);
+    left: -8px;
+    position: absolute;
+    top: 18px;
+}
+
+#menuBar > ul > li > ul li {
+    padding: 4px 7px;
+    position: relative;
+    height: 1.25em;
+}
+
+#menuBar > ul > li > ul li > span {
+    position: absolute;
+    top: .465em;
+}
+
+#menuBar > ul > li.active > ul {
+    display: block;
+    z-index: 8;
+}
+
+#menuBar > ul > li > ul li:hover {
+    background: #3f4753;
+}
+
+
+
+#editor {
+    flex: 3 1 75%;
+    height: calc(100% - 24px);
+    background: #282c34;
+    overflow: scroll;
+    border-top: 1px solid rgba(255, 255, 255, .075);
+}
+
+#controls {
+    flex: 1 1 25%;
+    height: calc(100% - 24px);
+    background: #282c34;
+    border-top: 1px solid rgba(255, 255, 255, .075);
+    overflow-y: scroll;
+}
+
+#controls .accordion {
+    display: none;
+}
+
+#controls.active .accordion {
+    display: block;
+}
+
+.row {
+    display: block;
+    clear: both;
+    white-space: nowrap;
+    height: 26px;
+}
+
+.room {
+    height: 24px;
+    width: 24px;
+    background-color: rgba(0,0,0,.25);
+    border: 1px solid rgba(0,0,0, .1);
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.room.selected {
+    background-color: rgba(255,255,255,.1);
+}
+
+.room:hover {
+    border-color: rgba(255,255,255,.25);
+}
+
+.room.north-wall {
+    border-top: 1px solid white;
+}
+
+.room.south-wall {
+    border-bottom: 1px solid white;
+}
+
+.room.east-wall {
+    border-right: 1px solid white;
+}
+
+.room.west-wall {
+    border-left: 1px solid white;
+}
+
+.room.north-wall.illusion {
+    border-top-style: dashed;
+}
+
+.room.north-wall.invisible {
+    border-top-color: rgba(255,255,255,.5);
+}
+
+.room.north-wall.breakable {
+    border-top-color: red;
+}
+
+.noteIcon {
+    position: absolute;
+}
+
+#noteTable tr td:nth-of-type(2) i {
+    padding-right: .35em;
+    cursor: pointer;
+}
+
+#noteTable tr td:nth-of-type(2) i:last-of-type {
+    padding-right: 0;
+}
+
+button {
+    cursor: pointer;
+    padding: .465em 1.25em .3em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.35);
+    border-radius: 4px;
+    font-size: 1.15em;
+}
+
+button.primary {
+    background: #088cff;
+    border: 1px solid #181a1f;
+    border-radius: 4px;
+    color: white;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#088cff+0,0669bf+100 */
+    background: #088cff; /* Old browsers */
+    background: -moz-linear-gradient(top, #088cff 0%, #0669bf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #088cff 0%,#0669bf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #088cff 0%,#0669bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#088cff', endColorstr='#0669bf',GradientType=0 ); /* IE6-9 */
+}
+
+#mdlOverlay {
+    /*display: none;*/
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+    opacity: 0;
+    transition: all .25s ease-in;
+}
+
+#mdlOverlay.active {
+    /*display: block;*/
+    z-index: 8;
+    opacity: 1;
+}
+
+#mdlAddTrap > .options > .col:nth-of-type(2) {
+    width: 66%;
+}
+
+.modal {
+    /*display: none;*/
+    position: absolute;
+    z-index: 9;
+    /*width: 50%;*/
+    /*top: 50%;*/
+    top: -50px;
+    left: calc(50% - 25% - 64px);
+    width: 0; max-height: 0;
+    background-color: #282c34;
+    padding: 0;
+    opacity: 0;
+    border-radius: 4px;
+    box-shadow: 4px 4px 16px #000;
+    color: white;
+    border: 1px solid #060608;
+    transition: all .5s ease-in;
+    overflow: hidden;
+}
+
+.modal.active {
+    z-index: 9;
+    width: 50%;
+    max-height:500px;
+    padding: 32px;
+    opacity: 1;
+    /*display: block;*/
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal.with-header {
+    padding: 60px 32px 32px 32px;
+}
+
+.modal .cancel {
+    color: white;
+    text-decoration: none;
+    margin-right: 1em;
+    margin-top: .8em;
+}
+
+.modal .modal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    background: #121317;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#121317+0,0e0f12+100 */
+    background: #121317; /* Old browsers */
+    background: -moz-linear-gradient(top, #121317 0%, #0e0f12 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #121317 0%,#0e0f12 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #121317 0%,#0e0f12 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121317', endColorstr='#0e0f12',GradientType=0 ); /* IE6-9 */
+}
+
+.divider {
+    height: 0px;
+    border-top: 1px solid rgba(0,0,0,.75);
+    border-bottom: 1px solid rgba(255,255,255,.175);
+    width: 100%;
+}
+
+.modal-header .divider {
+    position: absolute;
+    top: calc(100% + -2px);
+    left: 0;
+}
+
+.modal-header > span {
+    line-height: 2em;
+    padding-left: .75em;
+    top: 2px;
+    position: relative;
+}
+
+.modal-header .modal-controls button {
+    background: none;
+    border: 0;
+    color: white;
+    height: 2em;
+    font-size: 1em;
+    padding-right: .75em;
+    padding-top: .25em;
+}
+
+input, textarea, select {
+    line-height: 1.5em;
+    background: #1e2127;
+    border: 1px solid #101114;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 6px #1c1e24;
+    outline: none;
+    color:white;
+    padding-left: 0.5em;
+    padding-top: .25em;
+}
+
+input.name-unavailable {
+    background: rgba(198, 32, 32, .25);
+}
+
+input.name-available {
+    background: rgba(32, 198, 32, .25);
+}
+
+input:focus, textarea:focus {
+    border: 1px solid #101114;
+    box-shadow: none;
+}
+
+textarea {
+    height: 8em;
+}
+
+.modal button {
+}
+
+.full-width {
+    width: calc(100% - .5em);
+    margin-bottom: 1em;
+}
+
+.modal button.full-width:last-of-type {
+    margin-bottom: 0;
+}
+
+.accordion {
+    padding: 1em 1em 0 1em;
+}
+
+.accordion-title {
+    height: 32px;
+    background: #373b47;
+    line-height: 32px;
+    padding-left: .5em;
+    color: rgba(255,255,255,.8);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #171e28;
+    border-bottom: 0;
+    box-shadow: inset 0 3px 8px rgba(255,255,255,.1);
+    cursor: pointer;
+}
+
+.accordion.collapsed .accordion-title {
+    border-bottom: 1px solid #171e28;
+}
+
+.accordion-title i {
+    transition: all 0.2s ease-out;
+}
+
+.accordion.collapsed .accordion-title i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    background: #20272f;
+    padding: 1em;
+    border: 1px solid #171e28;
+    color: rgba(255,255,255,.8);
+    box-shadow: inset 0 0px 6px rgba(0,0,0,.25);
+    transition: all 0.2s ease-out;
+    max-height: 500px;
+}
+
+.accordion.collapsed .accordion-content {
+    transition: all 0.2s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1em;
+    border: 0px solid #171e28;
+}
+
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 0;
+	background-color: #282c34;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #282c34;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #3c424e;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #21252b;
+}
+
+
+.checkbox {
+    padding-bottom: .375em;
+}
+
+.checkbox:last-of-type {
+    padding-bottom: 0;
+}
+
+.checkbox label {
+    padding-top: 2px;
+}
+
+.checkbox .options {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-out;
+}
+
+[type="checkbox"]:checked ~ .options {
+    height: auto;
+    max-height: 500px;
+    transition: all 1s ease-out;
+}
+
+.checkbox .options .spacer {
+    width: calc(100% - 27px);
+    padding-left: 27px;
+    padding-top: 4px;
+}
+
+.breakValue {
+    width: 32px;
+    float: right;
+    margin-top: -8px;
+    display: none;
+}
+
+.chkBreakable:checked ~ .breakValue {
+    display: inline;
+}
+
+
+#notes table {
+    width: 100%;
+}
+
+#notes table tbody > tr > td:nth-of-type(2) {
+    width: 6em;
+    text-align: right;
+}
+
+#notes table tbody > tr > td:nth-of-type(2) > a {
+    color: #088cff;
+}
+
+#addNote, #addTrap {
+    background: #088cff;
+    border-radius: 11px;
+    padding: 4px 3px 0 3px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-top: 1em;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#088cff+0,0669bf+100 */
+    background: #088cff; /* Old browsers */
+    background: -moz-linear-gradient(top, #088cff 0%, #0669bf 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #088cff 0%,#0669bf 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #088cff 0%,#0669bf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#088cff', endColorstr='#0669bf',GradientType=0 ); /* IE6-9 */
+}
+
+#addNote i, #addTrap i {
+    color: #20272f;
+    text-shadow: none;
+}
+
+#lblMapName > span {
+    display: none;
+    font-size: .75em;
+}
+
+#lblMapName.name-available > .success {
+    display: inline;
+}
+
+#lblMapName.name-unavailable > .error {
+    display: inline;
+}
+
+
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 27px;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: -2px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid rgba(0,0,0,.65);
+    background: #1a2026;
+    border-radius: 3px;
+    box-shadow: inset 0 0px 5px rgba(0,0,0,.55);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2717';
+  position: absolute;
+  top: 3px; left: 4px;
+  font-size: 18px;
+  line-height: 0.8;
+  color: #088cff;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #12161a!important;
+}
+
+
+
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor:pointer;
+    display:block;
+    width:8px;
+    color: #333;
+    text-align:center;
+    position:relative;
+}
+
+input[type=number]::-webkit-inner-spin-button:before,
+input[type=number]::-webkit-inner-spin-button:after {
+    content: "^";
+    position:absolute;
+    right: 0;
+    font-family:monospace;
+    line-height:
+}
+
+input[type=number]::-webkit-inner-spin-button:before {
+    top:0px;
+}
+
+input[type=number]::-webkit-inner-spin-button:after {
+    bottom:0px;
+    -webkit-transform: rotate(180deg);
+}
+
+.option {
+    margin-top: 1em;
+}
+
+.option input {
+    clear: both;
+}
+
+.options .option:first-of-type label {
+    display: block;
+}
+
+.option select {
+    display: block;
+    min-height: 2em;
+}
+
+#trapTypeMech, label[for='trapTypeMech'], #trapTypeMag, label[for='trapTypeMag'] {
+    float: left;
+}
+
+.options .option:first-of-type {
+    margin-bottom: 2em;
+    margin-top: 0;
+}
+
+.options .option input[type='number'] {
+    display: block;
+width: calc(100% - .8em);
+}
+
+.options .option:nth-of-type(2) {
+    clear: both;
+}
+
+.options select {
+    width: 100%;
+}
